@@ -17,7 +17,7 @@ The BLS file has national, state, and metro-area wage percentiles (10th/25th/med
 
 Run it: `python notebooks/phase1_wages.py`. Charts are saved to `figures/`.
 
-Two caveats shape everything below. OEWS only counts people on a payroll, so self-employed gig players (most working jazz musicians) are missing. BLS also suppresses annual wages for musicians because their hours are too irregular, so every number here is hourly.
+Two caveats shape everything below. OEWS only counts people on a payroll, so self-employed gig players (most working jazz musicians) are missing. BLS also publishes only hourly wages for musicians, because they typically work fewer than 2,080 hours a year and are paid by the hour, so every number here is hourly.
 
 **1. Musicians earn the highest median of any performing job, with a huge range.** The median musician earns $47.80/hr, ahead of producers ($43.44), actors ($29.05) and dancers ($24.80). Across all arts and media jobs, only art directors ($55.22) and animators ($49.06) earn more. But the 90th percentile ($132.56) is 6.5 times the 10th ($20.35), compared with 4.1 times across all US jobs.
 
@@ -27,11 +27,11 @@ Two caveats shape everything below. OEWS only counts people on a payroll, so sel
 
 ![Industry medians](figures/02_industry_median.png)
 
-**3. New York leads the jazz cities, and New Orleans is invisible.** New York has the most payroll musicians (4,410, median $66.29). New Orleans has only 110, and BLS suppresses its wage entirely. That says more about cash gigs and self employment than about the size of the scene.
+**3. New York leads the jazz cities, and New Orleans is invisible.** New York has the most payroll musicians of any US metro (4,410, median $66.29). New Orleans has only 110, and BLS suppresses its wage entirely. That likely says more about cash gigs and self employment than about the size of the scene.
 
 ![Jazz cities](figures/03_jazz_cities.png)
 
-**4. Location matters a lot.** Nevada's median ($65.46, the Las Vegas residency circuit) is 3.4 times South Carolina's ($19.27). Only 28 states have a median at all: BLS doesn't list 10 of the 50 states plus DC, and suppresses 13 more, including New York and Tennessee.
+**4. Location matters a lot.** Nevada's median ($65.46; 240 of its 260 payroll musicians work in the Las Vegas metro) is 3.4 times South Carolina's ($19.27). Only 28 states have a median at all: BLS doesn't list 10 of the 50 states plus DC, and suppresses 13 more, including New York and Tennessee.
 
 ![States](figures/04_states.png)
 
@@ -45,11 +45,11 @@ Inputs: Spotify pays rights holders roughly $0.003 to $0.005 per stream (it pays
 
 ![Streams needed](figures/05_streams_needed.png)
 
-**6. Only about 13,800 artists in the world clear that bar.** Spotify says more than 13,800 artists generated $100k+ in 2025, out of a catalog of millions. That money goes to the label or distributor first, so most of those artists take home less. The 100,000th ranked artist generated more than $7,300, which equals 153 hours (under 4 weeks) of median musician pay.
+**6. Only about 13,800 artists in the world clear that bar.** Spotify says more than 13,800 artists generated $100k+ in 2025. That money goes to the label or distributor first, so most of those artists take home less. The 100,000th ranked artist generated more than $7,300, which equals 153 hours (under 4 weeks) of median musician pay.
 
 ![Spotify ladder](figures/06_spotify_ladder.png)
 
-**What this means for jazz.** Jazz did not make Luminate's 2025 list of the top 10 US genres by audio streams, which ranked Children's and Holiday music above it. A jazz player would need to be in the top tier of a small genre to match a median payroll wage from streaming alone. That is why gigs, teaching and church work (Phase 1) carry jazz careers.
+**What this means for jazz.** Jazz did not make Luminate's 2025 list of the top 10 US genres by audio streams, whose last two spots went to Children's (#9) and Holiday (#10). A jazz player would need to be in the top tier of a small genre to match a median payroll wage from streaming alone. That is why gigs, teaching and church work (Phase 1) carry jazz careers.
 
 ## Phase 3 findings: does the pay cover the cost of living?
 
@@ -90,11 +90,11 @@ AFM Local 802, the New York musicians' union, sets minimum pay ("scale") per ser
 ## Data sources
 Accessed October 3 to 4, 2026.
 
-- U.S. Bureau of Labor Statistics. Occupational Employment and Wage Statistics (OEWS), May 2025, all data file (SOC 27-2042, Musicians and Singers). https://www.bls.gov/oes/special-requests/oesm25all.zip. Coverage note (OEWS excludes the self employed): https://www.bls.gov/oes/oes_emp.htm
-- Spotify. Loud & Clear 2025 (artist earnings tiers and the 100,000th artist). https://loudandclear.byspotify.com/takeaways/
+- U.S. Bureau of Labor Statistics. Occupational Employment and Wage Statistics (OEWS), May 2025, all data file (SOC 27-2042, Musicians and Singers). https://www.bls.gov/oes/special-requests/oesm25all.zip. Hourly-only wages for musicians: "Field Descriptions" sheet in the same file. Coverage note (OEWS excludes the self employed): https://www.bls.gov/oes/oes_emp.htm
+- Spotify. Loud & Clear 2025 (artist earnings tiers and the 100,000th artist). https://loudandclear.byspotify.com/takeaways/. How royalties are pooled ("streamshare"): https://loudandclear.byspotify.com/process/
 - Royalty Exchange. "How Much Do Streaming Platforms Pay Per Stream" (Spotify: $0.003 to $0.005), July 15, 2026. https://royaltyexchange.com/blog/how-much-do-streaming-platforms-pay-per-stream
 - Spotify for Artists. Track monetization eligibility (1,000 stream threshold, April 2024). https://support.spotify.com/us/artists/article/track-monetization-eligibility/
-- Luminate. 2025 Year-End Music Report: https://luminatedata.com/reports/yearend-music-industry-report-2025/. The genre ranking was read secondhand from @chartdata: https://x.com/chartdata/status/2011464844604543155
+- Luminate. 2025 Year-End Music Report: https://luminatedata.com/reports/yearend-music-industry-report-2025/. The top 10 core genres by US audio streams were read secondhand from @chartdata, January 14, 2026: https://x.com/chartdata/status/2011464844604543155
 - Living wage data sourced from the Living Wage Institute via https://livingwage.mit.edu/metros/35620 (New York), /metros/41860 (San Francisco), /metros/31080 (Los Angeles), /metros/16980 (Chicago), /metros/34980 (Nashville), /metros/29820 (Las Vegas) and /metros/35380 (New Orleans). Accessed on October 3, 2026. The Institute allows direct use of up to 10 locations with this citation; this project uses 7.
 - U.S. Bureau of Economic Analysis. Regional Price Parities by State (SARPP), 2008 to 2024. https://apps.bea.gov/regional/zip/SARPP.zip
 - AFM Local 802. Single Engagement Classical Wage Scales & Conditions, effective September 12, 2025 through September 11, 2028 (PDF, not redistributed here; the script downloads it). https://www.local802afm.org/wp-content/uploads/2025/12/SINGLE-ENGAGEMENT-CLASSICAL-SCALES-2025-2028-v121625.pdf. All public contracts: https://www.local802afm.org/contracts/

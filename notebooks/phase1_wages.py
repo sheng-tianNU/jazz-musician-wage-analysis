@@ -7,8 +7,8 @@
 # Two limits to keep in mind:
 # - OEWS only counts **employees**. Self-employed gig players are not in it, which is
 #   most working jazz musicians. Treat these numbers as "musicians with a payroll job".
-# - BLS suppresses **annual** wages for musicians (hours are too irregular), so every
-#   figure here is **hourly**.
+# - BLS publishes only **hourly** wages for musicians (they typically work fewer than
+#   2,080 hours a year and are paid by the hour), so every figure here is hourly.
 #
 # Run as a script (`python notebooks/phase1_wages.py`) or cell by cell in VS Code.
 

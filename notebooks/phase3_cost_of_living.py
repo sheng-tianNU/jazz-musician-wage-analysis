@@ -7,7 +7,7 @@
 # - **States:** adjust each state's median wage for local prices (BEA Regional Price
 #   Parities) to see who earns the most in real terms.
 #
-# Wages are hourly (BLS suppresses annual pay for musicians), so the honest question is
+# Wages are hourly (BLS publishes only hourly pay for musicians), so the honest question is
 # "how many hours a week must a musician work to cover basic costs?" We also show the
 # full-time (2,080 hr) annual figure for scale.
 #
