@@ -1,0 +1,5 @@
+__pycache__/
+# Raw BLS download (~80MB each); see README setup
+data/oesm25all.zip
+data/oesm25all/
+data/local802_classical_scales_2025_2028.pdf
