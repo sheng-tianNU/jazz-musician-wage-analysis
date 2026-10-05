@@ -59,7 +59,7 @@ def rate(section, item, col=2):
     """First rate in `section` whose label contains `item`. col 2 = rate1 = first contract year."""
     hit = scales[(scales.section == section) & scales.item.str.contains(item, regex=False)]
     assert len(hit), f"no '{item}' in {section}"
-    return hit.iloc[0, col]
+    return float(hit.iloc[0, col])
 
 
 PENSION = float(re.search(r"([\d.]+)% as per AFM-EPF", text).group(1)) / 100
