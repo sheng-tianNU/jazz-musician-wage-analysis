@@ -39,7 +39,7 @@ Two caveats shape everything below. OEWS only counts people on a payroll, so sel
 
 Run it: `python notebooks/phase2_streaming.py` (uses the Phase 1 data cache). The model asks how many Spotify streams a year it takes to earn what the median payroll musician would earn working full time: $47.80/hr x 2,080 hrs = **$99,424**.
 
-Inputs: Spotify pays rights holders roughly $0.003 to $0.005 per stream (it pays from a revenue pool, so this is an average, not a rate card). How much of that reaches the artist depends on the deal; the 100%, 50% and 20% shares below are typical assumptions, not published figures. Songwriting royalties are left out. Since April 2024, a track needs at least 1,000 streams in the previous 12 months to earn any royalties.
+Inputs: Spotify does not pay a fixed rate per stream. It pays roughly two thirds of its music revenue to rights holders, split by each track's share of all streams. Third-party estimates put the average at about $0.003 to $0.005 per stream to the recording's rights holders (label or distributor). How much of that reaches the artist depends on the deal, and the 100%, 50% and 20% shares below are our assumptions. The 20% is in line with the UK competition regulator, which found new major label deals paid an average royalty of 19.7% to 23.3% of the label's streaming income (2012 to 2021). That rate applies before an advance is paid back, so an artist who hasn't recouped gets nothing until they do. 100% assumes a flat-fee distributor that takes no cut. We found no official source for a typical indie split, so 50/50 is a round illustration. Songwriting royalties are left out. Since April 2024, a track needs at least 1,000 streams in the previous 12 months to earn any royalties.
 
 **5. A label deal multiplies the streams you need by 5.** A DIY artist needs about 25 million streams a year (roughly 68k a day). On a 20% major label royalty it is about 124 million.
 
@@ -49,7 +49,7 @@ Inputs: Spotify pays rights holders roughly $0.003 to $0.005 per stream (it pays
 
 ![Spotify ladder](figures/06_spotify_ladder.png)
 
-**What this means for jazz.** Jazz did not make Luminate's 2025 list of the top 10 US genres by audio streams, whose last two spots went to Children's (#9) and Holiday (#10). A jazz player would need to be in the top tier of a small genre to match a median payroll wage from streaming alone. That is why gigs, teaching and church work (Phase 1) carry jazz careers.
+**What this means for jazz.** Jazz did not make the top 10 US genres by audio streams in Luminate's 2025 Year-End Music Report (as reported by @chartdata), whose last two spots went to Children's (#9) and Holiday (#10). A jazz player would need to be in the top tier of a small genre to match a median payroll wage from streaming alone. That is why gigs, teaching and church work (Phase 1) carry jazz careers.
 
 ## Phase 3 findings: does the pay cover the cost of living?
 
@@ -92,8 +92,10 @@ Accessed October 3 to 4, 2026.
 
 - U.S. Bureau of Labor Statistics. Occupational Employment and Wage Statistics (OEWS), May 2025, all data file (SOC 27-2042, Musicians and Singers). https://www.bls.gov/oes/special-requests/oesm25all.zip. Hourly-only wages for musicians: "Field Descriptions" sheet in the same file. Coverage note (OEWS excludes the self employed): https://www.bls.gov/oes/oes_emp.htm
 - Spotify. Loud & Clear 2025 (artist earnings tiers and the 100,000th artist). https://loudandclear.byspotify.com/takeaways/. How royalties are pooled ("streamshare"): https://loudandclear.byspotify.com/process/
-- Royalty Exchange. "How Much Do Streaming Platforms Pay Per Stream" (Spotify: $0.003 to $0.005), July 15, 2026. https://royaltyexchange.com/blog/how-much-do-streaming-platforms-pay-per-stream
+- Spotify. Loud & Clear FAQ (no fixed per-stream rate; roughly two thirds of music revenue paid to rights holders). https://loudandclear.byspotify.com/faq/
+- Royalty Exchange. "How Much Do Streaming Platforms Pay Per Stream" (third-party estimate, Spotify: $0.003 to $0.005), July 15, 2026. https://royaltyexchange.com/blog/how-much-do-streaming-platforms-pay-per-stream
 - Spotify for Artists. Track monetization eligibility (1,000 stream threshold, April 2024). https://support.spotify.com/us/artists/article/track-monetization-eligibility/
+- UK Competition and Markets Authority. Music and streaming: final report, November 29, 2022. Table 2.8, p. 45: average gross royalty rate in new major label artist contracts, 19.7% (2012) to 23.3% (2021), before recoupment. https://assets.publishing.service.gov.uk/media/6384f43ee90e077898ccb48e/Music_and_streaming_final_report.pdf
 - Luminate. 2025 Year-End Music Report: https://luminatedata.com/reports/yearend-music-industry-report-2025/. The top 10 core genres by US audio streams were read secondhand from @chartdata, January 14, 2026: https://x.com/chartdata/status/2011464844604543155
 - Living wage data sourced from the Living Wage Institute via https://livingwage.mit.edu/metros/35620 (New York), /metros/41860 (San Francisco), /metros/31080 (Los Angeles), /metros/16980 (Chicago), /metros/34980 (Nashville), /metros/29820 (Las Vegas) and /metros/35380 (New Orleans). Accessed on October 3, 2026. The Institute allows direct use of up to 10 locations with this citation; this project uses 7.
 - U.S. Bureau of Economic Analysis. Regional Price Parities by State (SARPP), 2008 to 2024. https://apps.bea.gov/regional/zip/SARPP.zip
