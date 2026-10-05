@@ -94,6 +94,20 @@ AFM Local 802, the New York musicians' union, sets minimum pay ("scale") per ser
 - **Phase 4 (done), union rates:** parse the public AFM Local 802 classical scale PDF and compare it to BLS wages and MIT living costs in New York.
 - **Phase 5 (optional), jazz repertoire angle:** fold in the Kaggle "Jazz Standards" dataset for a music-content dimension alongside the economics analysis.
 
+## Raw data
+
+Every dataset comes straight from the organization that publishes it. Small copies are saved in `data/`, so you don't need the big BLS download to run all four phases.
+
+| Data | Published by | How it gets here | Saved in `data/` as |
+|---|---|---|---|
+| Wages for musicians and 5 comparison jobs, May 2025 | U.S. Bureau of Labor Statistics (OEWS) | Downloaded by hand: BLS blocks scripts. Phase 1 filters the 80MB, ~413,000 row file down to the jobs we use | `creative_occ_2025.csv` (raw file not in git) |
+| Basic yearly budget, one adult, no children, 7 metros | MIT Living Wage Calculator | Phase 3 reads the budget table from each metro page (MIT allows up to 10 locations with its citation) | `mit_living_costs_2026.csv` |
+| Regional Price Parities by state, 2024 | U.S. Bureau of Economic Analysis | Phase 3 downloads the zip | `bea_rpp_state.csv` |
+| Union minimum pay, Sept 2025 to Sept 2028 | AFM Local 802 (New York musicians' union) | Phase 4 downloads the PDF and parses every rate line with pdfplumber | `local802_scales.csv` (PDF not in git) |
+| Artist earnings tiers, 2025 (4 numbers) | Spotify, Loud & Clear report | Typed into `notebooks/phase2_streaming.py` | none |
+
+The per-stream rate and the artist shares in Phase 2 aren't raw data. They're a third-party estimate and our assumptions, labeled as such above.
+
 ## Data sources
 Accessed October 3 to 4, 2026.
 
