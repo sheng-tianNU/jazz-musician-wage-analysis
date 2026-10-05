@@ -35,6 +35,13 @@ Two caveats shape everything below. OEWS only counts people on a payroll, so sel
 
 ![States](figures/04_states.png)
 
+**Why do some states pay more?** Four things show up in the data.
+
+- **Show business pays well but hires few.** 240 of Nevada's 260 payroll musicians work in the Las Vegas metro, where the musicians' union (AFM Local 369) has played for headliners and production shows on the Strip for decades and negotiates their pay. But casinos rarely put musicians on their own payroll. Nationwide, hotels (including casino hotels) employ just 50 payroll musicians, and the whole amusement and gambling industry 280. Show work comes through producers and promoters instead, and event promoters pay the highest median of any industry ($102.50, finding 2). Nevada also has fewer musicians per worker than the US average (a location quotient of 0.72, where 1.0 is average). So Nevada's top median comes from a small number of well paid show jobs. You won't find a big musician workforce there.
+- **Tourism can mean more jobs instead.** Hawaii has the highest concentration of payroll musicians of any state, 5.1 times the national share (Honolulu: 5.4). Its median ($52.59) is high but isn't the top. A tourism economy is the likely reason, though BLS data can't show which employers these are.
+- **Some of the gap is cost of living.** Expensive states pay more in dollars but less once you count local prices: Hawaii drops 5 places, Massachusetts 4 and California 3 (finding 8).
+- **The ends of the ranking are the shakiest numbers.** BLS publishes an error estimate for each state's average wage. The two least reliable belong to the top and bottom states: Nevada (18%) and South Carolina (24%). With only about 260 and 330 payroll musicians in those states, treat the 3.4x gap as rough.
+
 ## Phase 2 findings: could streaming replace a paycheck?
 
 Run it: `python notebooks/phase2_streaming.py` (uses the Phase 1 data cache). The model asks how many Spotify streams a year it takes to earn what the median payroll musician would earn working full time: $47.80/hr x 2,080 hrs = **$99,424**.
@@ -99,6 +106,7 @@ Accessed October 3 to 4, 2026.
 - Luminate. 2025 Year-End Music Report: https://luminatedata.com/reports/yearend-music-industry-report-2025/. The top 10 core genres by US audio streams were read secondhand from @chartdata, January 14, 2026: https://x.com/chartdata/status/2011464844604543155
 - Living wage data sourced from the Living Wage Institute via https://livingwage.mit.edu/metros/35620 (New York), /metros/41860 (San Francisco), /metros/31080 (Los Angeles), /metros/16980 (Chicago), /metros/34980 (Nashville), /metros/29820 (Las Vegas) and /metros/35380 (New Orleans). Accessed on October 3, 2026. The Institute allows direct use of up to 10 locations with this citation; this project uses 7.
 - U.S. Bureau of Economic Analysis. Regional Price Parities by State (SARPP), 2008 to 2024. https://apps.bea.gov/regional/zip/SARPP.zip
+- Musicians Union of Las Vegas, AFM Local 369. About (Strip headliners and production shows; negotiates wages with employers). https://musicians.vegas/about/
 - AFM Local 802. Single Engagement Classical Wage Scales & Conditions, effective September 12, 2025 through September 11, 2028 (PDF, not redistributed here; the script downloads it). https://www.local802afm.org/wp-content/uploads/2025/12/SINGLE-ENGAGEMENT-CLASSICAL-SCALES-2025-2028-v121625.pdf. All public contracts: https://www.local802afm.org/contracts/
 
 Planned for Phase 5 (not used yet): Kaggle Jazz Standards dataset, https://www.kaggle.com/datasets/melihcanyardi/jazz-standards

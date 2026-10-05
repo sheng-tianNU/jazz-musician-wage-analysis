@@ -155,6 +155,18 @@ ax.set_title(f"{ends.AREA_TITLE.iloc[-1]} pays {ends.H_MEDIAN.iloc[-1] / ends.H_
 save(fig, "04_states.png", "Source: U.S. Bureau of Labor Statistics, OEWS, May 2025")
 print(f"States with a reported median: {len(states)} of {(mus.AREA_TYPE == '2').sum()}")
 
+# %% [markdown]
+# ## Why some states pay more: concentration (location quotient, 1.0 = US average) and
+# BLS's relative standard error of the mean wage (MEAN_PRSE, %), plus casino-adjacent industries.
+
+# %%
+st = mus[mus.AREA_TYPE == "2"].assign(
+    LQ=lambda d: d.LOC_QUOTIENT, PRSE=lambda d: pd.to_numeric(d.MEAN_PRSE, errors="coerce"))
+print(st.sort_values("LQ", ascending=False)[["AREA_TITLE", "TOT_EMP", "LQ", "H_MEDIAN"]].head(3).to_string(index=False))
+print(st.dropna(subset=["H_MEDIAN"]).sort_values("PRSE", ascending=False)[["AREA_TITLE", "TOT_EMP", "PRSE"]].head(3).to_string(index=False))
+nat = mus[(mus.AREA_TYPE == "1")]
+print(nat[nat.NAICS.isin(["721000", "713000", "711300"])][["NAICS_TITLE", "TOT_EMP", "H_MEDIAN"]].to_string(index=False))
+
 # %% Summary table for the README.
 summary = mus[(mus.AREA_TYPE == "1") & (mus.I_GROUP == "cross-industry")][
     ["TOT_EMP", "H_PCT10", "H_PCT25", "H_MEDIAN", "H_PCT75", "H_PCT90"]]
