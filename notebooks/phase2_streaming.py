@@ -14,7 +14,8 @@
 # - 2,080 hours = a full-time year. BLS won't publish annual pay for musicians because
 #   most don't work full-time, so this is a "full-time equivalent", not a typical income.
 # - The artist's cut of what the rights holder receives depends on the deal. 20% is close to
-#   the UK CMA's average major label royalty (19.7% to 23.3%, 2012 to 2021, before recoupment).
+#   the UK CMA's figures: 19.7% to 23.3% average royalty in new major contracts (2012 to 2021),
+#   and 25.0% to 26.3% of majors' streaming income for all their UK artists, before recoupment.
 # - Songwriting/publishing royalties are left out; this models the recording only.
 #
 # Run: `python notebooks/phase2_streaming.py` (needs phase 1's data/creative_occ_2025.csv).
