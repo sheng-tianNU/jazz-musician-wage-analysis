@@ -103,8 +103,9 @@ save(fig, "02_industry_median.png", "Source: U.S. Bureau of Labor Statistics, OE
 
 # %% [markdown]
 # ## 3. Jazz cities
-# New Orleans' wage is suppressed and only ~110 musicians are on payroll. That reflects
-# BLS methodology (cash gigs, self-employment) more than the size of the scene.
+# New Orleans' and Nashville's wages are suppressed by BLS, and only ~110 musicians are on
+# payroll in New Orleans. That reflects BLS methodology (cash gigs, self-employment) more
+# than the size of the scene.
 
 # %%
 HUBS = {
