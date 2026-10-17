@@ -4,6 +4,25 @@ A data science project analyzing musician income and streaming/gig economics. Th
 
 The biggest limitation shapes the whole project: very few jazz musicians have a steady job. The exceptions are chairs in ensembles like the Jazz at Lincoln Center Orchestra and Broadway pit orchestras. Everyone else lives gig to gig, paid in cash or as an independent contractor, and government wage data can't see that work. So each phase asks what the visible data says, and what it leaves out.
 
+## Key findings
+
+- **Musicians earn the top median of any performing job ($47.80/hr), but the 90th percentile earns 6.5 times the 10th.**
+- **Streaming rarely replaces a paycheck.** Matching a median full time wage takes about 25 million Spotify streams a year as a DIY artist, or 124 million on a 20% label royalty. Only about 13,800 artists worldwide clear $100k on Spotify.
+- **Where BLS reports a wage, 15 to 23 paid hours a week covers a basic budget.** Steady hours are what gigging players lack.
+- **Union scale pays well per hour, but covering a basic New York budget takes about 2 union gigs every week.**
+
+![Wage spread](figures/01_creative_wage_spread.png)
+
+**Built with:** Python, pandas, matplotlib, pdfplumber (PDF parsing), lxml (HTML tables). Data from BLS, BEA, MIT, Spotify and AFM Local 802.
+
+## Project layout
+
+```
+notebooks/   phase1_wages.py ... phase4_union_scales.py, plus style.py (shared chart style)
+data/        small cached extracts, so every phase runs from a fresh clone
+figures/     the 10 charts used below
+```
+
 ## Setup
 
 1. `pip install -r requirements.txt`
@@ -86,7 +105,7 @@ AFM Local 802, the New York musicians' union, sets minimum pay ("scale") per ser
 
 ![Union job breakdown](figures/10_union_job_breakdown.png)
 
-## Planned phases
+## Phases
 
 - **Phase 1 (done), wage baseline:** national + state/metro wage distribution for musicians & singers (BLS OEWS), compared to other creative occupations and to jazz-hub cities (NYC, Chicago, New Orleans) specifically.
 - **Phase 2 (done), streaming economics:** model musician income from streaming using published per-stream rate estimates (Spotify Loud & Clear report, Royalty Exchange rate estimate), for example "streams needed to earn $X/year."
