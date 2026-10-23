@@ -27,7 +27,7 @@ figures/     the 10 charts used below
 
 1. `pip install -r requirements.txt`
 2. Get the BLS wage data. BLS blocks automated downloads of its bulk files, so download it in your browser: https://www.bls.gov/oes/special-requests/oesm25all.zip
-3. Unzip it so the file sits at `data/oesm25all/all_data_M_2025.xlsx` (about 80MB, kept out of git).
+3. Unzip it so the file sits at `data/oesm25all/all_data_M_2025.xlsx`.
 4. Run the phases in order: `python notebooks/phase1_wages.py`, then phases 2, 3 and 4. Phase 1 saves a small extract (`data/creative_occ_2025.csv`: SOC 27-2042 "Musicians and Singers" plus comparison jobs) that the later phases read. Phases 3 and 4 download their other data on the first run.
 
 The BLS file has national, state, and metro-area wage percentiles (10th/25th/median/75th/90th) for all occupations.
