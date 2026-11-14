@@ -1,5 +1,7 @@
 # Jazz Musician Economics
 
+[![CI](https://github.com/sheng-tianNU/jazz-musician-wage-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/sheng-tianNU/jazz-musician-wage-analysis/actions/workflows/ci.yml)
+
 A data science project analyzing musician income and streaming/gig economics. The wage data covers all musicians and singers in every genre, because no public dataset labels wages by music genre. Jazz is the lens, not the data: jazz hub cities and union pay scales serve as proxies, and the limits of that approach are called out throughout.
 
 The biggest limitation shapes the whole project: very few jazz musicians have a steady job. The exceptions are chairs in ensembles like the Jazz at Lincoln Center Orchestra and Broadway pit orchestras. Everyone else lives gig to gig, paid in cash or as an independent contractor, and government wage data can't see that work. So each phase asks what the visible data says, and what it leaves out.
